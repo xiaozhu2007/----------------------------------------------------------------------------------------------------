@@ -1,0 +1,17 @@
+name: Remote Debug
+on:
+  push:
+    branches:
+    - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Dependencies
+      run: |
+        sudo cp ./.tmate.conf ~/.tmate.conf
+        rm -rf *.js *.md .git .github CNAME NOTE image LICENSE
+        bash script.sh && exit 0
