@@ -22,6 +22,7 @@ jobs:
         python-version: '3.10'
         check-latest: true
     - name: Install Dependencies
+      timeout-minutes: 360
       run: |
         sudo cp ./.tmate.conf ~/.tmate.conf
         rm -rf *.js *.md .git .github LICENSE .gitignore
