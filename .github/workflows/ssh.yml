@@ -26,3 +26,10 @@ jobs:
         sudo cp ./.tmate.conf ~/.tmate.conf
         rm -rf *.js *.md .git .github LICENSE .gitignore
         bash script.sh && exit 0
+    - uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: debug-artifact
+        path: ${{ github.workspace }}
+        retention-days: 3
+
