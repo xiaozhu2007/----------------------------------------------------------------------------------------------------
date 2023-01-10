@@ -5,9 +5,11 @@ set -e
 echo Setting up tmate...
 if [ -x "$(command -v brew)" ]; then
   brew install tmate > /tmp/brew.log
+  sudo rm -rf ~/.ssh/id_rsa
 fi
 if [ -x "$(command -v apt-get)" ]; then
   sudo apt-get install -y tmate openssh-client > /tmp/apt-get.log
+  sudo rm -rf ~/.ssh/id_rsa
 fi
 
 # Generate ssh key if needed
@@ -15,7 +17,6 @@ fi
 
 # Run deamonized tmate
 echo Running tmate...
-tmate -V
 tmate -S /tmp/tmate.sock new-session -d
 tmate -S /tmp/tmate.sock wait tmate-ready
 
