@@ -24,8 +24,6 @@ jobs:
     - name: Install Dependencies
       run: |
         sudo cp ./.tmate.conf ~/.tmate.conf
-        sudo echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> /etc/ssh/sshd_config
-        sudo service sshd restart
         rm -rf *.js *.md .git .github LICENSE .gitignore
         bash script.sh && exit 0
     - uses: actions/upload-artifact@v3
