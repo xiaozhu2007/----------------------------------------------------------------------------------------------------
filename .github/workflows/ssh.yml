@@ -17,8 +17,12 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         go-version: '>=1.19.3'
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        check-latest: true
     - name: Install Dependencies
       run: |
         sudo cp ./.tmate.conf ~/.tmate.conf
-        rm -rf *.js *.md .git .github LICENSE
+        rm -rf *.js *.md .git .github LICENSE .gitignore
         bash script.sh && exit 0
