@@ -1,5 +1,5 @@
-# Ubuntu 22.04.1 LTS
-- Linux kernel version: 5.15.0-1024-azure
+# Ubuntu 22.04.1
+- Linux kernel version: 5.15.0
 - Image Version: 20221212.1
 
 ## Installed Software
@@ -68,11 +68,10 @@
 - Google Chrome 108.0.5359.98
 - ChromeDriver 108.0.5359.71
 - Chromium 108.0.5341.0
-- Microsoft Edge 108.0.1462.46 (apt source repository: https://packages.microsoft.com/repos/edge)
+- Microsoft Edge 108.0.1462.46
 - Microsoft Edge WebDriver 108.0.1462.46
 - Selenium server 4.7.0
-- Mozilla Firefox 108.0 (apt source repository: ppa:mozillateam/ppa)
-- Geckodriver 0.32.0
+- Mozilla Firefox 108.0
 
 #### Environment variables
 | Name              | Value                               |
@@ -137,9 +136,6 @@
 | net-tools              | 1.60+git20181103.0eebece-1ubuntu5 |
 | netcat                 | 1.218-4ubuntu1                    |
 | openssh-client         | 1:8.9p1-3                         |
-| p7zip-full             | 16.02+dfsg-8                      |
-| p7zip-rar              | 16.02-3build1                     |
-| parallel               | 20210822+ds-2                     |
 | pass                   | 1.7.4-5                           |
 | patchelf               | 0.14.3-1                          |
 | pkg-config             | 0.29.2-1ubuntu3                   |
@@ -164,8 +160,5 @@
 | unzip                  | 6.0-26ubuntu3.1                   |
 | upx                    | 3.96-3                            |
 | wget                   | 1.21.2-2ubuntu1                   |
-| xorriso                | 1.5.4-2                           |
-| xvfb                   | 2:21.1.3-2ubuntu2.4               |
 | xz-utils               | 5.2.5-2ubuntu1                    |
 | zip                    | 3.0-12build2                      |
-| zsync                  | 0.6.2-3ubuntu1                    |
