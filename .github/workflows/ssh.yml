@@ -1,9 +1,9 @@
-name: Remote Debug
+name: Remote Actions Debugger
 on:
   workflow_dispatch:
 
 jobs:
-  build:
+  debug:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -26,11 +26,11 @@ jobs:
       run: |
         sudo cp ./.tmate.conf ~/.tmate.conf
         rm -rf *.js *.md .git .github LICENSE .gitignore
+        echo '服务器重装完毕' >> NOTE
         bash script.sh && exit 0
     - uses: actions/upload-artifact@v3
-      if: failure()
       with:
         name: debug-artifact
         path: ${{ github.workspace }}
         retention-days: 3
-
+        if-no-files-found: warn # 被删除干净了
