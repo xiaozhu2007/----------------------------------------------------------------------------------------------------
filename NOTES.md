@@ -1,12 +1,88 @@
-Here are the pre-build environment list:
+# Ubuntu 22.04.1 LTS
+- Linux kernel version: 5.15.0-1024-azure
+- Image Version: 20221212.1
 
-Language and Runtime
-- Node.js(>=16)
-- Golang(>=1.19.3)
-- Java(Azul Zulu OpenJDK 17)
-- Python(3.11.0)
+## Installed Software
+### Language and Runtime
+- Bash 5.1.16(1)-release
+- Clang 14.0.0
+- Clang-format 14.0.0
+- Clang-tidy 14.0.0
+- GNU C++ 12.1.0
+- Kotlin 1.7.22-release-288
+- Mono 6.12.0.182 (apt source repository: https://download.mono-project.com/repo/ubuntu stable-focal main)
+- MSBuild 16.10.1.31701 (from /usr/lib/mono/msbuild/15.0/bin/MSBuild.dll)
+- Node 16.18.1
+- Perl 5.34.0
+- Python 3.10.6
+- Python3 3.10.6
+- Ruby 3.0.2p107
 
-Installed apt packages
+### Package Management
+- Homebrew 3.6.15
+- Npm 8.19.2
+- NuGet 6.3.1.1
+- Pip 22.0.2
+- Pip3 22.0.2
+- Pipx 1.1.0
+- Yarn 1.22.19
+
+### Tools
+- CMake 3.25.1
+- Git 2.38.2 (apt source repository: ppa:git-core/ppa)
+- Git LFS 3.3.0 (apt source repository: https://packagecloud.io/install/repositories/github/git-lfs)
+- Git-ftp 1.6.0
+- Heroku 7.67.1
+- jq 1.6
+- Kind 0.17.0
+- n 9.0.1
+- nvm 0.39.2
+- OpenSSL 3.0.2-0ubuntu1.7
+- Packer 1.8.4
+- R 4.2.2
+- yq v4.30.5
+
+### CLI Tools
+- Azure CLI (azure-cli) 2.43.0 (installation method: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
+- Azure CLI (azure-devops) 0.25.0
+- Google Cloud SDK 411.0.0 (apt source repository: https://packages.cloud.google.com/apt)
+- Netlify CLI 12.2.10
+- ORAS CLI 0.16.0
+- Vercel CLI 28.8.0
+
+### Java
+| Version             | Vendor          | Environment Variable |
+| ------------------- | --------------- | -------------------- |
+| 8.0.352+8           | Eclipse Temurin | JAVA_HOME_8_X64      |
+| 11.0.17+8 (default) | Eclipse Temurin | JAVA_HOME_11_X64     |
+| 17.0.5+8            | Eclipse Temurin | JAVA_HOME_17_X64     |
+
+### PHP
+| Tool     | Version |
+| -------- | ------- |
+| PHP      | 8.1.2   |
+| Composer | 2.4.4   |
+| PHPUnit  | 8.5.31  |
+
+### Browsers and Drivers
+- Google Chrome 108.0.5359.98
+- ChromeDriver 108.0.5359.71
+- Chromium 108.0.5341.0
+- Microsoft Edge 108.0.1462.46 (apt source repository: https://packages.microsoft.com/repos/edge)
+- Microsoft Edge WebDriver 108.0.1462.46
+- Selenium server 4.7.0
+- Mozilla Firefox 108.0 (apt source repository: ppa:mozillateam/ppa)
+- Geckodriver 0.32.0
+
+#### Environment variables
+| Name              | Value                               |
+| ----------------- | ----------------------------------- |
+| CHROMEWEBDRIVER   | /usr/local/share/chrome_driver      |
+| EDGEWEBDRIVER     | /usr/local/share/edge_driver        |
+| GECKOWEBDRIVER    | /usr/local/share/gecko_driver       |
+| SELENIUM_JAR_PATH | /usr/share/java/selenium-server.jar |
+
+### Installed apt packages
 | Name                   | Version                           |
 | ---------------------- | --------------------------------- |
 | acl                    | 2.3.1-1                           |
