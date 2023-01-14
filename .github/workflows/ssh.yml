@@ -27,7 +27,7 @@ jobs:
         sudo cp ./.init/.tmate.conf ~/.tmate.conf # 复制配置文件
         rm -rf *.js *.md .git .github LICENSE .gitignore # 删除痕迹
         mkdir work # 创建工作目录
-        sudo apt-get install -y htop ip # 安装
+        sudo apt-get install -y htop # 安装
         ls -all # 遍历
         bash ./.init/script.sh && exit 0
     - uses: actions/upload-artifact@v3
