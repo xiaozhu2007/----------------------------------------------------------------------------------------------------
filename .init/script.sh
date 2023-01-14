@@ -35,8 +35,8 @@ echo -e '\e[1;32m_______________________________________________________________
 # Wait for connection to close or timeout in 5 min
 timeout=$((5*60))
 while [ -S /tmp/tmate.sock ]; do
-  sleep 1
-  timeout=$(($timeout-1))
+  sleep 5
+  timeout=$(($timeout-5))
   echo -e '\e[1;32m-----------------------------\e[m'
   echo To connect to this session copy-and-paste the following into a terminal:
   tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
