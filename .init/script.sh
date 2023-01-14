@@ -25,9 +25,9 @@ echo -e '\e[1;32m_______________________________________________________________
 echo
 echo Tmate.io Version:
 tmate -V
-echo To connect to this session copy-n-paste the following into a terminal:
+echo To connect to this session copy-and-paste the following into a terminal:
 tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-echo To connect to this session copy-n-paste the following into a browser:
+echo To connect to this session copy-and-paste the following into a browser:
 tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
 echo After connecting you can run 'touch /tmp/keepalive' to disable the 5m timeout
 echo -e '\e[1;32m________________________________________________________________________________\e[m'
@@ -37,6 +37,11 @@ timeout=$((5*60))
 while [ -S /tmp/tmate.sock ]; do
   sleep 1
   timeout=$(($timeout-1))
+  echo -e '\e[1;32m-----------------------------\e[m'
+  echo To connect to this session copy-and-paste the following into a terminal:
+  tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
+  echo After connecting you can run 'touch /tmp/keepalive' to disable the 5m timeout
+  echo -e '\e[1;32m-----------------------------\e[m'
 
   if [ ! -f /tmp/keepalive ]; then
     if (( timeout < 0 )); then
