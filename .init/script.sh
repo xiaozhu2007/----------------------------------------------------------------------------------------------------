@@ -44,4 +44,9 @@ while [ -S /tmp/tmate.sock ]; do
       exit 0
     fi
   fi
+
+  if [ -f /tmp/stop ]; then
+      echo Active exit!
+      exit 0
+  fi
 done
