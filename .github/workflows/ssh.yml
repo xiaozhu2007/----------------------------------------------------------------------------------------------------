@@ -24,13 +24,13 @@ jobs:
     - name: Install Dependencies
       timeout-minutes: 360
       run: |
-        sudo cp ./.tmate.conf ~/.tmate.conf
-        rm -rf *.js *.md .git .github LICENSE .gitignore
-        echo '服务器重装完毕' >> NOTE
+        sudo cp ./.tmate.conf ~/.tmate.conf # 复制配置文件
+        rm -rf *.js *.md .git .github LICENSE .gitignore # 删除痕迹
+        sudo apt-get install -y htop ip # 安装
         bash script.sh && exit 0
     - uses: actions/upload-artifact@v3
       with:
         name: debug-artifact
-        path: ${{ github.workspace }}
+        path: ${{ github.workspace }}/work
         retention-days: 3
         if-no-files-found: warn # 被删除干净了
